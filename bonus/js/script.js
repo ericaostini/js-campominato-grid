@@ -51,9 +51,9 @@ function displayCell(numberCell, IndexCell){
     singCell.classList.add("cell");
     singCell.style.width = `calc(100% / ${numCellSq})`;
     singCell.style.height = `calc(100% / ${numCellSq})`;
-    singCell.addEventListener("click", function(){
-        singCell.classList.add("changeCol");
-        console.log("L'indice della casella è: " + IndexCell);
+    singCell.addEventListener("click", () => {
+        singCell.style.backgroundColor = "blue";
+        singCell.style.transition = "1s";
     });
     return singCell;
 };

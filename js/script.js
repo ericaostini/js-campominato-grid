@@ -13,12 +13,13 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", function(){
     const numberCell = 49;
     const playground = document.getElementById("playground");
+    playground.innerHTML = " ";
     // ciclo for per visualizzare 100 celle 
     for (let i = 1; i <= numberCell; i++){
         const squareEl = displayCell(numberCell, i);
         playground.appendChild(squareEl);
     }
-}, {once:true});
+});
 
 function displayCell(numberCell, IndexCell){
     const numCellSq = Math.sqrt(numberCell);
@@ -30,11 +31,7 @@ function displayCell(numberCell, IndexCell){
     singCell.addEventListener("click", function(){
         singCell.classList.add("changeCol");
         console.log("L'indice della casella è: " + IndexCell);
-    });
+    },{once : true});
     return singCell;
-};
-
-function resetClass(){
-    document.getElementById("playground").remove();
 };
 

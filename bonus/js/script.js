@@ -13,14 +13,35 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", function(){
     const optionLiv = select.selectedIndex;
     console.log(optionLiv);
-    const numberCell = 49;
     const playground = document.getElementById("playground");
     playground.innerHTML = " ";
-    // ciclo for per visualizzare 100 celle 
-    for (let i = 1; i <= numberCell; i++){
-        const squareEl = displayCell(numberCell, i);
-        playground.append(squareEl);
+    let numberCell;
+    switch (optionLiv){
+        case 1:
+            numberCell = 100;
+            for (let i = 1; i <= numberCell; i++){
+                const squareEl = displayCell(numberCell, i);
+                playground.append(squareEl);
+            };
+            break;
+        case 2:
+            numberCell = 81;
+            for (let i = 1; i <= numberCell; i++){
+                const squareEl = displayCell(numberCell, i);
+                playground.append(squareEl);
+            };
+            break;
+        case 3:
+            numberCell = 49;
+            for (let i = 1; i <= numberCell; i++){
+                const squareEl = displayCell(numberCell, i);
+                playground.append(squareEl);
+            };
+            break;
+        default:
+            playground.innerHTML = "Seleziona un livello";
     }
+    // ciclo for per visualizzare 100 celle 
 });
 
 function displayCell(numberCell, IndexCell){

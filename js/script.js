@@ -5,10 +5,14 @@ click singola cella sfondo blu e in console visualizzo indice casella
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
+    const numberCell = 100;
     const playground = document.getElementById("playground");
     console.log(playground);
-    const squareEl = displayCell();
-    playground.append(squareEl);
+    // ciclo for per visualizzare 100 celle 
+    for (let i = 1; i <= numberCell; i++){
+        const squareEl = displayCell();
+        playground.append(squareEl);
+    }
 });
 
 function displayCell(){

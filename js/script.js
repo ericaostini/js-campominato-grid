@@ -7,6 +7,8 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", function(){
     const playground = document.getElementById("playground");
     console.log(playground);
+    const squareEl = displayCell();
+    playground.append(squareEl);
 });
 
 function displayCell(){

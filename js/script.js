@@ -9,6 +9,9 @@ in base alla difficoltà scelta stamperò un numero di diverso di celle
 */
 
 const btn = document.querySelector("button");
+const livOne = document.getElementById("one");
+const livTwo = document.getElementById("two");
+const livThree = document.getElementById("three");
 
 btn.addEventListener("click", function(){
     const numberCell = 49;
@@ -32,4 +35,5 @@ function displayCell(numberCell, IndexCell){
         console.log("L'indice della casella è: " + IndexCell);
     });
     return singCell;
-}
+};
+

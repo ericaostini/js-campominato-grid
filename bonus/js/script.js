@@ -11,9 +11,11 @@ in base alla difficoltà scelta stamperò un numero di diverso di celle
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
-    console.log(select.selectedIndex);
+    const optionLiv = select.selectedIndex;
+    console.log(optionLiv);
     const numberCell = 49;
     const playground = document.getElementById("playground");
+    playground.innerHTML = " ";
     // ciclo for per visualizzare 100 celle 
     for (let i = 1; i <= numberCell; i++){
         const squareEl = displayCell(numberCell, i);
@@ -35,8 +37,4 @@ function displayCell(numberCell, IndexCell){
     return singCell;
 };
 
-function displayLiv(){
-    const select = document.getElementById("select").value;
-    return select;
-}
 

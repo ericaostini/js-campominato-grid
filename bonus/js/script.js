@@ -9,6 +9,10 @@ in base alla difficoltà scelta stamperò un numero di diverso di celle
 */
 
 const btn = document.querySelector("button");
+const livOne = document.getElementById("one").value;
+console.log(livOne);
+const livTwo = document.getElementById("two");
+const livThree = document.getElementById("three");
 
 btn.addEventListener("click", function(){
     const numberCell = 49;
@@ -33,4 +37,8 @@ function displayCell(numberCell, IndexCell){
     });
     return singCell;
 };
+
+function displayLivOne(){
+    const numberCell = 49;
+}
 

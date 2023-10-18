@@ -9,12 +9,10 @@ in base alla difficoltà scelta stamperò un numero di diverso di celle
 */
 
 const btn = document.querySelector("button");
-const livOne = document.getElementById("one").value;
-console.log(livOne);
-const livTwo = document.getElementById("two");
-const livThree = document.getElementById("three");
+const select = document.getElementById("select");
 
 btn.addEventListener("click", function(){
+    console.log(select.selectedIndex);
     const numberCell = 49;
     const playground = document.getElementById("playground");
     // ciclo for per visualizzare 100 celle 

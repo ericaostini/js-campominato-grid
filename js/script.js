@@ -16,9 +16,9 @@ btn.addEventListener("click", function(){
     // ciclo for per visualizzare 100 celle 
     for (let i = 1; i <= numberCell; i++){
         const squareEl = displayCell(numberCell, i);
-        playground.append(squareEl);
+        playground.appendChild(squareEl);
     }
-});
+}, {once:true});
 
 function displayCell(numberCell, IndexCell){
     const numCellSq = Math.sqrt(numberCell);
@@ -32,5 +32,9 @@ function displayCell(numberCell, IndexCell){
         console.log("L'indice della casella è: " + IndexCell);
     });
     return singCell;
+};
+
+function resetClass(){
+    document.getElementById("playground").remove();
 };
 

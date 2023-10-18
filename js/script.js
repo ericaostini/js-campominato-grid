@@ -14,4 +14,8 @@ function displayCell(){
     let singCell = document.createElement("div");
     singCell.classList.add("cell");
     console.log(singCell);
+    singCell.addEventListener("click", function(){
+        singCell.classList.add("changeCol")
+    });
+    return singCell;
 }

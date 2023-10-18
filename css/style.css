@@ -13,3 +13,6 @@ body{
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
+.changeCol{
+    background-color: blue;
+}

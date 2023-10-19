@@ -61,18 +61,26 @@ function campoMinato(){
                 </div>
                 `;
         };
-        const numBombs = 16;
-        const arrayBombs = [];
-        while(arrayBombs.length <= numBombs){
-            let bomb = getRandomInt(1, numberCell);
-            console.log(bomb);
-            if(!arrayBombs.includes(bomb)){
-                arrayBombs.push(bomb);
-                console.log(arrayBombs);
-            }
-        }
+        getNumBomb(numberCell);
     };
 
+    
+    /**
+     * funzione genero un array contenente 16 numeri random corrispondendi alle posizioni delle bombe
+     * @param {Number} numberCell 
+     */
+    function getNumBomb(numberCell){
+        const numBombs = 16;
+            const arrayBombs = [];
+            while(arrayBombs.length < numBombs){
+                let bomb = getRandomInt(1, numberCell);
+                console.log(bomb);
+                if(!arrayBombs.includes(bomb)){
+                    arrayBombs.push(bomb);
+                    console.log(arrayBombs);
+                }
+            }
+    }
     /**
      * funzione che crea un quadratino
      * @param {Number} numberCell 

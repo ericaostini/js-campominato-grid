@@ -21,7 +21,7 @@ btn.addEventListener("click", function(){
             numberCell = 100;
             for (let i = 1; i <= numberCell; i++){
                 const squareEl = displayCell(numberCell, i);
-                playground.append(squareEl);
+                playground.append(squareEl); 
             };
             break;
         case 2:
@@ -39,7 +39,10 @@ btn.addEventListener("click", function(){
             };
             break;
         default:
-            playground.innerHTML = "Seleziona un livello";
+            playground.innerHTML = `
+            <div class="m-auto text-center text-light"> Seleziona un livello
+            </div>
+            `;
     }
     // ciclo for per visualizzare 100 celle 
 });
@@ -54,8 +57,11 @@ function displayCell(numberCell, IndexCell){
     singCell.addEventListener("click", () => {
         singCell.style.backgroundColor = "blue";
         singCell.style.transition = "1s";
-    });
+    },{once:true});
     return singCell;
 };
 
-
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  }
+  

@@ -11,7 +11,7 @@ in base alla difficoltà scelta stamperò un numero di diverso di celle
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
-    const numberCell = 49;
+    const numberCell = 100;
     const playground = document.getElementById("playground");
     playground.innerHTML = " ";
     // ciclo for per visualizzare 100 celle 

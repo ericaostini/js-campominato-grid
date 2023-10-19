@@ -7,6 +7,11 @@ click singola cella sfondo blu e in console visualizzo indice casella
 select per selezionare tipologia di difficoltà del gioco 
 in base alla difficoltà scelta stamperò un numero di diverso di celle
 */
+
+/*
+Programma deve generare 16 numeri causali nello stesso range della difficoltà prescelta = le bombe (ogni qudratino è un numero, selezioni random 16 di questi numeri dove assegno la bomba)
+*/
+
 "use strict";
 campoMinato();
 
@@ -56,8 +61,18 @@ function campoMinato(){
                 </div>
                 `;
         };
+        const numBombs = 16;
+        const arrayBombs = [];
+        while(arrayBombs.length <= numBombs){
+            let bomb = getRandomInt(1, numberCell);
+            console.log(bomb);
+            if(!arrayBombs.includes(bomb)){
+                arrayBombs.push(bomb);
+                console.log(arrayBombs);
+            }
+        }
     };
-    
+
     /**
      * funzione che crea un quadratino
      * @param {Number} numberCell 
@@ -79,7 +94,6 @@ function campoMinato(){
     };
 }
 
-function getRandomInt(min, max) {
+function getRandomInt(min, max){
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 };
-  

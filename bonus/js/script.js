@@ -7,13 +7,21 @@ click singola cella sfondo blu e in console visualizzo indice casella
 select per selezionare tipologia di difficoltà del gioco 
 in base alla difficoltà scelta stamperò un numero di diverso di celle
 */
-
+"use strict";
 campoMinato();
 
+/**
+ * main function del gioco Campo Minato
+ */
 function campoMinato(){
     const btn = document.querySelector("button");
     
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", playGame);
+
+    /**
+     * funzione per riprodurre celle in base al livello selezionato
+     */
+    function playGame(){
         const optionLiv = select.selectedIndex;
         console.log(optionLiv);
         const playground = document.getElementById("playground");
@@ -22,6 +30,7 @@ function campoMinato(){
         switch (optionLiv){
             case 1:
                 numberCell = 100;
+                // ciclo for per visualizzare 100 celle 
                 for (let i = 1; i <= numberCell; i++){
                     const squareEl = displayCell(numberCell, i);
                     playground.append(squareEl); 
@@ -46,10 +55,15 @@ function campoMinato(){
                 <div class="m-auto text-center text-light"> Seleziona un livello
                 </div>
                 `;
-        }
-        // ciclo for per visualizzare 100 celle 
-    });
+        };
+    };
     
+    /**
+     * funzione che crea un quadratino
+     * @param {Number} numberCell 
+     * @param {Number} IndexCell 
+     * @returns {Object} quadrato creato 
+     */
     function displayCell(numberCell, IndexCell){
         const numCellSq = Math.sqrt(numberCell);
         // creo div che formerà la cella a cui assegno le rispettive classi
